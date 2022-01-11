@@ -25,10 +25,10 @@ Figma: https://www.figma.com/file/6RO1qfzOenOBEAfx5QWiFY/DD-%2F-Countdown-(Copy)
 #### Features:
 <!-- ❌✅ -->
 
-1. ✅ Criar uma página que contenha um formulário para que o usuário possa inserir o e-mail.
-2. ✅ Ter um botão para o usuário clicar após inserir o e-mail.
-3. ❌ Criar uma função para o botão (ex. Exibir um alerta).
-4. ❌ Salvar os e-mails digitados em algum banco de dados.
+1. ✅ A página deve ter um countdown timer com uma contagem regressiva para o tempo de lançamento.
+2. ✅ Adicione um botão com o texto "inscreva-se".
+3. ❌ Adicione um modal que aparece quando o usuário clica no botão "Inscreva-se".
+4. ❌ No modal adicione um formulário com inputs de nome, e-mail e um botão de envio.
 
 ##
 
