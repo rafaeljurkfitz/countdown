@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,32 +9,49 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" />
-    <script src="./main.js"></script>
     <title>Countdown</title>
 </head>
+
 <body>
-    <header>
-        <div class="top-image"></div>
-    </header>    
-    <div class="content">       
-        <div class="container">
-            <h1>Ready to launch in...</h1>
-            <div class="spans">
-                <span>Dias</span>
-                <span>Horas</span>
-                <span>Minutos</span>
-                <span>Segundos</span>
+    <img src="./assets/top-image.svg" alt="" width="100%">
+    <main>
+        <section class="container">
+            <div class="timer-container">
+                <h1>Ready to launch in...</h1>
+                <div class="timer">
+                    <div class="time">
+                        <small>Dias</small>
+                        <h2 id="days"></h2>
+                    </div>
+                    <span>:</span>
+                    <div class="time">
+                        <small>Horas</small>
+                        <h2 id="hours"></h2>
+                    </div>
+                    <span>:</span>
+                    <div class="time">
+                        <small>Minutos</small>
+                        <h2 id="minutes"></h2>
+                    </div>
+                    <span>:</span>
+                    <div class="time">
+                        <small>Segundos</small>
+                        <h2 id="seconds"></h2>
+                    </div>
+                </div>
+                <p>Inscreva-se para saber mais sobre o lançamento</p>
+                <button id="btn-open-modal" class="btn btn-submit">Inscreva-se
+                </button>
             </div>
-            <h2 id="timer"></h2>
-            <p>Inscreva-se para saber mais sobre o lançamento</p>
-            <a href="#">Inscreva-se</a>
-        </div>
-        <aside class="side-right">
-            <img src="./images/rocket.svg" alt="">
-        </aside>
-    </div>
-    <footer>
-        <div class="bottom-image"></div> 
-    </footer>
+            <div class="img-container">
+                <div class="image">
+                    <img src="./assets/rocket.svg" alt="">
+                </div>
+            </div>
+        </section>
+    </main>
+    <img src="./assets/bottom-image.svg" alt="" width="100%">
+    <script src="./scripts.js"></script>
 </body>
+
 </html>

@@ -1,95 +1,170 @@
+/* ============= Global ============= */
+* {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
 :root {
     --black: #4D4C59;
     --purple: #6C63FF;
     --light-grey: #C8C8C8;
     --text-color: #9C9AB6;
     --background: #e5e5e5;
+}
+
+body {  
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     overflow: hidden;
 }
 
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+body,
+html {
+  height: 100%;
 }
 
-body {
-    width: 100vw;
-    height: 100%;
-}
+/* ============= Buttons ============= */
 
-header {
-    display: block;
+.btn {
+    background-color: var(--purple);
+    color: var(--background);
+    border: none;
+    box-shadow: 0px 1px 5px var(--black);
+    cursor: pointer;
+  }
+  
+.btn:hover {
+    background-color: #5d55f3;
+    box-shadow: none;
 }
   
-.top-image {
-    width: 100vw;
-    height: 133px;
-    background-image: url(./images/top-image.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-.container {
-    line-height: 80px;
-    text-align: center;
-}
-
-.content {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 110px auto;
-}
-
-h1 {
-    color: var(--purple);
-    text-transform: uppercase;
-    font-size: 52px;
-    font-weight: bold;
-    letter-spacing: 3.5px;
-}
-
-h2 {
-    color: var(--black);
-    font-size: 90px;
-    font-weight: 400;
-}
-
-.spans {
-    color: var(--light-grey);
-    display: flex;
-    justify-content: space-evenly;
-    font-size: 15px;
-}
-
-p {
-    color: var(--text-color);
-    font-size: 15px;
-}
-
-a {
-    text-decoration: none;
-    color: #fff;
-    background-color: var(--purple);
-    padding: 12px 30px;
+.btn-submit {
+    padding: 0.75rem 1.5rem;
     border-radius: 10px;
 }
+  
+.btn-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(10px, -12px);
+    color: var(--white);
+    font-weight: bold;
+    font-size: 1.25rem;
+    padding: 0.5rem 1rem;
+    background-color: #6c63ff;
+    border: none;
+    border-radius: 46% 54% 35% 65% / 61% 37% 63% 39%;
+    cursor: pointer;
+}
 
-footer {
-    display: block;
+
+/* ============= Main ============= */
+
+.container {
+    max-width: 1000px;
+    margin: auto auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    padding: 1.5rem;
 }
   
-.bottom-image {
+.timer-container {
+    flex-basis: 55%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+.timer-container h1 {
+    font-size: 2.25rem;
+    letter-spacing: 3px;
+    color: var(--purple);
+    margin-bottom: 1rem;
+}
+  
+.timer-container p {
+    color: var(--text-color);
+    margin-bottom: 2rem;
+}
+  
+.timer-container .timer {
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-end;
+}
+  
+.timer-container .timer span {
+    font-size: 4rem;
+    color: var(--black);
+}
+  
+.timer-container .timer .time {
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+.timer-container .timer .time small {
+    color: var(--light-grey);
+}
+  
+.timer-container .timer .time h2 {
+    font-size: 4rem;
+    font-weight: normal;
+    color: var(--black);
+}
+  
+.img-container .image img {
     width: 100%;
-    height: 229px;
-    background-image: url(./images/bottom-image.svg);
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: 100%;
-    position: fixed;
-    bottom: 0;
 }
 
+/* ============= Responsive ============= */
+
+@media (max-width: 1020px) {
+    .timer-container .timer {
+      gap: 1rem;
+    }
+  
+    .timer-container .timer span,
+    .timer-container .timer .time h2 {
+      font-size: 3rem;
+    }
+}
+  
+@media (max-width: 968px) {
+    body {
+      overflow: auto;
+    }
+  
+    .container {
+      flex-direction: column;
+    }
+  
+    .timer-container .timer .time {
+      width: 100%;
+    }
+}
+  
+@media (max-width: 385px) {
+    .timer-container .timer {
+      gap: 0.5rem;
+    }
+}
+  
+@media (max-width: 335px) {
+    .timer-container .timer {
+      flex-direction: column;
+    }
+  
+    .timer-container .timer span {
+      display: none;
+    }
+}
